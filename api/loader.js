@@ -28,3 +28,14 @@
         window.addEventListener("resize", lazyload);
         window.addEventListener("orientationChange", lazyload);
       });
+
+      var timeleft = 10;
+      var downloadTimer = setInterval(function(){
+        if(timeleft <= 0){
+          clearInterval(downloadTimer);
+          document.getElementById("taking-to-long").innerHTML = "<span style='color:#c2423e;'><br>This Is Taking a while...</span>";
+        } else {
+
+        }
+        timeleft -= 1;
+      }, 1000);
