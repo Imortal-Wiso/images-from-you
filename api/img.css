@@ -7,6 +7,6 @@ img {
 
 html,
 body {
-  background-color: #24252a;
+  background-color: #24252a !important;
   font: normal 14px/100% "Andale Mono", AndaleMono, monospace !important;
 }
