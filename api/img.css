@@ -5,6 +5,7 @@ img {
   border: 0;
 }
 
-html {
+html,
+body {
   background-color: #24252a;
 }
