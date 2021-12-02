@@ -19,6 +19,7 @@
                 document.removeEventListener("scroll", lazyload);
                 window.removeEventListener("resize", lazyload);
                 window.removeEventListener("orientationChange", lazyload);
+                document.getElementById("imgloader").style.display = "none";
               }
           }, 20);
         }
