@@ -8,4 +8,5 @@ img {
 html,
 body {
   background-color: #24252a;
+  font: normal 14px/100% "Andale Mono", AndaleMono, monospace !important;
 }
