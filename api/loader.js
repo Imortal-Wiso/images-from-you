@@ -24,6 +24,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }, 20);
   }
+       document.removeEventListener("scroll", lazyload);
+       window.removeEventListener("resize", lazyload);
+       window.removeEventListener("orientationChange", lazyload);
+       window.removeEventListener("orientationChange", lazyload);
 });
 
 
