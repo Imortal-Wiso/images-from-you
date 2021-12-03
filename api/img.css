@@ -5,6 +5,13 @@ body {
   overflow: hidden;
 }
 
+::selection {
+  /* Change highlight background color to black */
+  background: #22232e;
+  /* Change highlight text color to red */
+  color: #a0a0a3;
+}
+
 .listings {
   background-color:#242322;
   margin-top: 3rem;
