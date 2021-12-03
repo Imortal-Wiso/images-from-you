@@ -5,8 +5,9 @@ body {
 }
 
 .listings {
-  border: 1px solid #000;
-  width: 60px;
+  background-color:#242322;
+  width: 50rem;
+  height: 50rem;
   overflow: hidden;
   white-space: nowrap; 
 }
