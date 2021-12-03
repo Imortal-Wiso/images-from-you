@@ -35,7 +35,7 @@
         document.getElementById("imgloader").style.display = "none";   
       else
         el.src = src;
-
+        document.getElementById("imgloader").style.display = "none";   
       fn? fn() : null;
     }
     img.src = src;
@@ -56,6 +56,7 @@
       , processScroll = function(){
           for (var i = 0; i < images.length; i++) {
             if (elementInViewport(images[i])) {
+              document.getElementById("imgloader").style.display = "none";   
               loadImage(images[i], function () {
                 images.splice(i, i);
               });
