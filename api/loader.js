@@ -28,3 +28,11 @@
         window.addEventListener("resize", lazyload);
         window.addEventListener("orientationChange", lazyload);
       });
+
+var image = document.images[0];
+var downloadingImage = new Image();
+downloadingImage.onload = function(){
+    image.src = this.src;
+    document.getElementById("imgloader").style.display = "none";
+};
+downloadingImage.src = "http://an.image/to/aynchrounously/download.jpg";
