@@ -69,10 +69,9 @@
       images.push(query[i]);
     };
 
-    while(1) {
-      processScroll();
-      addEventListener('scroll',processScroll);
-    }
+    processScroll();
+    addEventListener('',processScroll);
+ 
 }(this);
 
   
