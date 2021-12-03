@@ -26,3 +26,7 @@ body {
   overflow:hidden; 
   z-index:999999;
 }
+
+disframe > exit-frame {
+  opacity: 1;
+}  
