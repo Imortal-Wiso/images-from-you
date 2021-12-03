@@ -29,5 +29,5 @@ body {
 
 .exit-frame {
   opacity: 1;
-  position: relative;
+  position: absolute;
 }  
