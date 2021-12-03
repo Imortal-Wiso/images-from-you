@@ -1,78 +1,28 @@
-!function(window){
-  var $q = function(q, res){
-        if (document.querySelectorAll) {
-          res = document.querySelectorAll(q);
-        } else {
-          var d=document
-            , a=d.styleSheets[0] || d.createStyleSheet();
-          a.addRule(q,'f:b');
-          for(var l=d.all,b=0,c=[],f=l.length;b<f;b++)
-            l[b].currentStyle.f && c.push(l[b]);
-
-          a.removeRule(0);
-          res = c;
-        }
-        return res;
-      }
-    , addEventListener = function(evt, fn){
-        window.addEventListener
-          ? this.addEventListener(evt, fn, false)
-          : (window.attachEvent)
-            ? this.attachEvent('on' + evt, fn)
-            : this['on' + evt] = fn;
-      }
-    , _has = function(obj, key) {
-        return Object.prototype.hasOwnProperty.call(obj, key);
-      }
-    ;
-
-  function loadImage (el, fn) {
-    var img = new Image()
-      , src = el.getAttribute('data-src');
-    img.onload = function() {
-      if (!! el.parent)
-        el.parent.replaceChild(img, el)
-        document.getElementById("imgloader").style.display = "none";   
-      else
-        el.src = src;
-        document.getElementById("imgloader").style.display = "none";   
-      fn? fn() : null;
-    }
-    img.src = src;
-  }
-
-  function elementInViewport(el) {
-    var rect = el.getBoundingClientRect()
-
-    return (
-       rect.top    >= 0
-    && rect.left   >= 0
-    && rect.top <= (window.innerHeight || document.documentElement.clientHeight)
-    )
-  }
-
-    var images = new Array()
-      , query = $q('img.lazy')
-      , processScroll = function(){
-          for (var i = 0; i < images.length; i++) {
-            if (elementInViewport(images[i])) {
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages = document.querySelectorAll("img.lazy");    
+  var lazyloadThrottleTimeout;
+  
+  function lazyload () {
+    if(lazyloadThrottleTimeout) {
+      clearTimeout(lazyloadThrottleTimeout);
+      document.getElementById("imgloader").style.display = "none";   
+    }    
+    
+    lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
               document.getElementById("imgloader").style.display = "none";   
-              loadImage(images[i], function () {
-                images.splice(i, i);
-              });
             }
-          };
+        });
+        if(lazyloadImages.length == 0) { 
+          continue;
         }
-      ;
-    // Array.prototype.slice.call is not callable under our lovely IE8 
-    for (var i = 0; i < query.length; i++) {
-      images.push(query[i]);
-    };
-
-    processScroll();
-    addEventListener('scroll',processScroll);
-
-}(this);
+    }, 20);
+  }
+});
 
 
 
