@@ -3,3 +3,10 @@ body {
   background-color: #24252a !important;
   font: normal 14px/100% "Andale Mono", AndaleMono, monospace !important;
 }
+
+.listings {
+  border: 1px solid #000;
+  width: 60px;
+  overflow: hidden;
+  white-space: nowrap; 
+}
