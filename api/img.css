@@ -27,6 +27,6 @@ body {
   z-index:999999;
 }
 
-disframe > exit-frame {
+.exit-frame {
   opacity: 1;
 }  
