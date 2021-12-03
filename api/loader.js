@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
        document.removeEventListener("scroll", lazyload);
        window.removeEventListener("resize", lazyload);
        window.removeEventListener("orientationChange", lazyload);
-       sleep(9000) {
+       if (sleep(9000)) {
           document.getElementById("imgloader").style.display = "none";   
        }       
 });
