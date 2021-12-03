@@ -1,9 +1,10 @@
 img {
-  background: transparent;
+  background: #1f1e1d;
   display: block;
   width:80rem;
   height:55rem;
   margin: 10px auto;
+  border: 1px solid #d1564b;
 }
 
 html,
