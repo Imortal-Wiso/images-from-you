@@ -1,3 +1,11 @@
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   var lazyloadImages = document.querySelectorAll("img.lazy");    
   var lazyloadThrottleTimeout;
@@ -24,11 +32,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }, 20);
   }
-       document.getElementById("imgloader").style.display = "none";   
        document.removeEventListener("scroll", lazyload);
        window.removeEventListener("resize", lazyload);
        window.removeEventListener("orientationChange", lazyload);
-       window.removeEventListener("orientationChange", lazyload);
+       sleep(3000)
+       document.getElementById("imgloader").style.display = "none";   
 });
 
 
