@@ -31,5 +31,7 @@ body {
 }
 
 .exitbutton {
-  margin-right:-30rem;
+  position:absolute;
+  left:5px;
+  down:5px;
 }
