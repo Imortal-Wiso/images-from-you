@@ -14,7 +14,6 @@
                     img.src = img.dataset.src;
                     img.classList.remove('lazy');
                     document.getElementById("imgloader").style.display = "none";
-                    document.getElementById("information").style.visibility = "visable";
                   }
               });
               if(lazyloadImages.length == 0) { 
