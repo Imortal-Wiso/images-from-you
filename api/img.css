@@ -13,7 +13,6 @@ body {
 }
 
 .disframe {
-  position: relative;
   top:0; 
   left:0; 
   bottom:0; 
@@ -25,4 +24,12 @@ body {
   padding:0; 
   overflow:hidden; 
   z-index:999999;
+}
+
+.exit-frame {
+  position: absolute;
+}
+
+.framestart {
+  position: relative;
 }
