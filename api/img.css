@@ -1,12 +1,3 @@
-img {
-  background: #1f1e1d;
-  display: block;
-  width:80rem;
-  height:55rem;
-  margin: 10px auto;
-  border: none;
-}
-
 html,
 body {
   background-color: #24252a !important;
