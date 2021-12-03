@@ -10,9 +10,23 @@
   </head>
   <body>
     <center id="IMAGES__LOADER">
-      <script src="api/loader.js"> </script>
-      <img class="lazy" style="margin-top: 3rem; margin: 0, auto;" width="55%" height="60%" data-src="https://the-imortal-crasher.github.io/images-from-you/api/map.png" src="api/map.png"/>
-      <h1 id="imgloader" style="margin-top:34rem; margin:0, auto; color:#c2423e;">Image's Loading <div style="color:#c2423e;" class="spinner-border" role="status"></div> </h1>
+      <div class="listings">
+        <a href="page/1.html" target="target" data-toggle="modal" data-target="#exampleModal"> Soldier Island Drawing </a>
+      </div>
+      
+      <!-- Model For Iframe And Targeting {data-toggle="modal" data-target="#exampleModal"} -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <iframe width="50rem" height="50rem" src="" name="target" ></iframe>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <footer style="margin-bottom:1rem;"> Image's For You &copy;-2021 </footer>
     </center>   
    </body>
