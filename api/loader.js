@@ -6,6 +6,7 @@ function sleep(milliseconds) {
   } while (currentDate - date < milliseconds);
 }
 
+sleep(9000)
 document.addEventListener("DOMContentLoaded", function() {
   var lazyloadImages = document.querySelectorAll("img.lazy");    
   var lazyloadThrottleTimeout;
@@ -35,9 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
        document.removeEventListener("scroll", lazyload);
        window.removeEventListener("resize", lazyload);
        window.removeEventListener("orientationChange", lazyload);
-       if (sleep(9000)) {
-          document.getElementById("imgloader").style.display = "none";   
-       }       
+       document.getElementById("imgloader").style.display = "none";          
 });
 
 
