@@ -16,6 +16,7 @@ body {
 }
 
 .disframe {
+  overflow: hidden;
   top:1px; 
   left:1px; 
   bottom:1px; 
