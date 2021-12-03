@@ -39,6 +39,7 @@
     img.onload = function() {
       if (!! el.parent)
         el.parent.replaceChild(img, el)
+        document.getElementById("imgloader").style.display = "none";
       else
         el.src = src;
 
