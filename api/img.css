@@ -27,6 +27,6 @@ body {
   padding:0; 
   overflow:hidden; 
   z-index:999999;
-  position: relative;
+  position: absolute;
 }
 
